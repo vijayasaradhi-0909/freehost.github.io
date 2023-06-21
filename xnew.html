@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="xnew.css">
+        <link rel="stylesheet" href="button.css">
+        <!-- <link rel="icon" href="images\v.png"> -->
+        <title>VJ Prana</title>
+        <link rel="icon" href="images\om.jpg">
+        <script src="xnew.js"></script>
+    </head>
+        <body style="align-items: center;">
+
+                <div  id="aym">    
+                    <span style="--i:1;"></span>                
+                    <span style="--i:2;"></span>                
+                    <span style="--i:3;"></span>                
+                </div>              
+              <div  id="aym1">                
+                <span style="--i:1;"></span>                
+                <span style="--i:2;"></span>                
+                <span style="--i:3;"></span>                
+              </div>              
+              
+
+            <div class="color1"></div>
+            <div class="color2"></div>
+            <h1 id="showMenuIcon" onclick="showMenuBar()">=</h1>
+            <h1 id="closeMenuIcon"  onclick="hideMenuBar()">X</h1>
+            <h1 id="titlename" style="color: rgb(24, 223, 173);">PRANAYAMA</h1>
+            <h3 id="numberdisplay"></h3>
+            <BR><BR><BR></BR>
+            <!-- animation circles -->
+            <div id="img">
+                <div id="circle1"></div>
+                <div id="circle2"></div>
+                <div id="circle3"></div>
+                <div id="circle4"></div>
+                <div id="circle5"></div>
+                <div id="circle6"></div>
+            </div>          
+            <br><br><br><br>
+
+                <div style="position: absolute;bottom:100px;right:515px;">
+                    <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&  START BUTTON &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&77 -->
+                <button class="button" 
+                onclick="myStart=setTimeout(myFunction1,2000);
+                submit();
+                startradiobutton();
+                methods();
+                playbgm();
+                // alert(universe);
+                console.log('timer started');
+                document.getElementById('titlename').innerHTML='Get Ready';"
+                id="startbutton">Start
+                </button>
+
+                <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&  END BUTTON &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&77 -->
+                <button  class="button" onclick="stopFunction()">End</button><br><br><br>
+
+                <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&  REP INPUT  &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&77 -->
+                <input id="showrep" placeholder="enter the reps: " value="2"></input><br>
+                </div>
+            
+            <div id="menuBar">
+                                                
+                <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&& BACKGROUND START AND STOP  &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&77 -->
+                
+                <p for="cars">Choose BGM:</p>
+                    <select id="omvalue" onchange="stopbgm(); playbgm();">
+                        <option value= 1 selected>Om Chanting</option>
+                        <option value= 2>ThiruVasagam</option>
+                        <option value= 3>Forest</option>
+                        <option value= 1 >Om Chanting</option>
+                        <option value= 2>ThiruVasagam</option>
+                        <option value= 3>Forest</option>
+                        <option value= 1 >Om Chanting</option>
+                        <option value= 2>ThiruVasagam</option>
+                        <option value= 3>Forest</option>
+                        <option value= 1>Om Chanting</option>
+                        <option value= 2>ThiruVasagam</option>
+                        <option value= 3>Forest</option>
+                    </select>
+                    
+                <div style="text-align: center;">
+                    <button onclick="playbgm()" style="display: block;" id="bgmstartbtn"><i class="fa fa-play"></i></button>
+                    <button onclick="stopbgm()" style="display: none;"  id="bgmstopbtn"><i class="fa fa-pause"></i></button>                    
+                </div>
+                <button onclick="stopAnim()">stop animation</button>
+
+                <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&  RADIO BUTTONS &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&77 -->
+                <div id="radiobox" class="myDIV">  
+                    <h1 style="font-family:cursive;">select a breathing method </h1> 
+                    <input type="radio" value="1" name="meth" >4-7-8 breathing</input><br>
+                    <input type="radio" value="2" name="meth">2-7-8 breathing</input><br>
+                    <input type="radio" value="3" name="meth">box breathing</input><br>
+                    <input type="radio" value="4" name="meth" checked>custom</input>
+                    <p id="demo1" style="color:aliceblue;"></p>
+                </div>
+
+                <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&  CUSTOM BREATHE INPUTS  &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&77 -->
+                <div id="hiddenbar" style="display:none;">
+                    <h1 style="font-family:cursive;">CUSTOMIZE: </h1>
+                    <label>INHALE</label><br><input id="in" placeholder="Inhale time:"  value="4"></input><br>
+                    <label>HOLD</label><br><input id="hd" placeholder="Holding time:" value="16"></input><br>
+                    <label>EXHALE</label><br><input id="ex" placeholder="Exhale time:"  value="8"></input>
+                </div>
+
+            </div>
+    
+            <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&  IMAGE LAYOUT  &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&77 -->                
+            <!-- <img  style="position: absolute;margin: auto;bottom:80px;left:90px;" src="images\inhale.jpg" id="pic" width="300px" height="350px">	 -->
+            
+        </body>       
+</html>
